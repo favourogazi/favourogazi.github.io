@@ -130,9 +130,9 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.12fr .88fr;
-      gap: clamp(2rem, 5vw, 4.2rem);
-      align-items: end;
+      grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
+      gap: clamp(1.6rem, 3.5vw, 2.8rem);
+      align-items: stretch;
     }
     .hero h1 {
       font-size: clamp(3.1rem, 8.4vw, 5.6rem);
@@ -191,27 +191,37 @@
     }
     .portrait-card {
       position: relative;
-      background: var(--paper-deep);
-      border-radius: 1.4rem;
-      overflow: hidden;
-      box-shadow: 0 22px 55px rgba(18, 18, 18, 0.08);
+      margin: 0;
+      height: 100%;
+      min-height: clamp(28rem, 68vh, 40rem);
+      border-radius: 0;
+      background: transparent;
+    }
+    .portrait-card::before {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      top: 1.15rem;
+      right: 0;
+      bottom: 0;
+      left: 1.15rem;
+      background: var(--ink);
     }
     .portrait-card img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center top;
-    }
-    .portrait-card figcaption {
       position: absolute;
-      left: 1rem;
-      bottom: 1rem;
-      padding: .4rem .75rem;
-      border-radius: 999px;
-      background: rgba(246, 243, 236, 0.94);
-      font-size: .76rem;
-      font-weight: 600;
-      letter-spacing: .05em;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: calc(100% - 1.15rem);
+      height: calc(100% - 1.15rem);
+      max-width: none;
+      object-fit: cover;
+      object-position: center 16%;
+      filter: contrast(1.12);
+      border-radius: 0;
+      box-shadow:
+        0 0 0 1px var(--ink),
+        0 22px 44px rgba(18, 18, 18, 0.28);
     }
 
     /* Sections */
@@ -500,8 +510,35 @@
       .writing-item .go { display: none; }
     }
     @media (max-width: 860px) {
+      .hero {
+        padding-top: 0;
+      }
       .hero-grid, .cases, .contact-grid { grid-template-columns: 1fr; }
-      .portrait-card { max-width: 24rem; }
+      .hero .hero-grid {
+        width: 100%;
+        gap: 1.45rem;
+      }
+      .hero-copy {
+        width: min(100% - 1.6rem, var(--max));
+        margin-inline: auto;
+      }
+      .portrait-card {
+        order: -1;
+        width: 100%;
+        max-width: none;
+        min-height: clamp(22rem, 118vw, 34rem);
+      }
+      .portrait-card::before {
+        top: auto;
+        left: 0;
+        right: 0;
+        height: .7rem;
+      }
+      .portrait-card img {
+        width: 100%;
+        height: calc(100% - .7rem);
+        box-shadow: none;
+      }
       .nav-links { display: none; }
       .contact-links { grid-template-columns: 1fr 1fr; }
     }
@@ -534,7 +571,7 @@
   <main id="top">
     <section class="hero" aria-label="Introduction">
       <div class="wrap hero-grid">
-        <div>
+        <div class="hero-copy">
           <p class="eyebrow">Operator · Writer</p>
           <h1>Favour <em>Ogazi</em></h1>
           <p class="tagline">I build the operating structure that turns priorities into execution.</p>
@@ -546,7 +583,6 @@
         </div>
         <figure class="portrait-card">
           <img src="portrait.jpg" width="800" height="1200" alt="Black-and-white studio portrait of Favour Ogazi">
-          <figcaption>Favour Ogazi</figcaption>
         </figure>
       </div>
     </section>
