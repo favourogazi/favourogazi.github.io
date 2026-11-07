@@ -3,817 +3,207 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Favour Ogazi — Operator &amp; Writer</title>
-  <meta name="description" content="Favour Ogazi is an operations leader and writer. She builds the structure, ownership and momentum that move priorities from intention to execution.">
-  <meta name="theme-color" content="#111111">
-  <meta property="og:title" content="Favour Ogazi — Operator &amp; Writer">
-  <meta property="og:description" content="Operations leader and writer. Structure, ownership and momentum from intention to execution.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="portrait.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Favour Ogazi — Operator &amp; Writer">
-  <meta name="twitter:description" content="Operations leader and writer. Structure, ownership and momentum from intention to execution.">
-  <meta name="twitter:image" content="portrait.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Favour Ogazi</title>
+  <meta name="description" content="Favour Ogazi is Operations Lead at Mighty, a cross-border payments and FX business. She writes about psychology, productivity, relationships and faith.">
+  <meta name="theme-color" content="#f3f0e8">
   <style>
     :root {
-      --ink: #121212;
-      --ink-soft: #2a2a2a;
-      --paper: #f6f3ec;
-      --paper-deep: #ebe6db;
-      --white: #fffcf7;
-      --muted: #5f5a52;
-      --line: rgba(18, 18, 18, 0.12);
-      --line-strong: rgba(18, 18, 18, 0.22);
-      --accent: #8a5a3b;
-      --accent-deep: #6e452c;
-      --max: 1120px;
-      --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
-      --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --bg: #f3f0e8;
+      --ink: #1c1b17;
+      --muted: #4f4b44;
+      --line: rgba(28, 27, 23, 0.16);
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+      --max: 68rem;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
       color: var(--ink);
-      background: var(--paper);
+      background: var(--bg);
       font-family: var(--sans);
       font-size: 1.0625rem;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
       text-rendering: optimizeLegibility;
     }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--accent);
+    :focus-visible {
+      outline: 2px solid var(--ink);
       outline-offset: 3px;
     }
+    .skip {
+      position: absolute;
+      left: 1rem;
+      top: 0;
+      transform: translateY(-120%);
+      background: var(--ink);
+      color: var(--bg);
+      padding: .6rem .9rem;
+      z-index: 10;
+    }
+    .skip:focus { transform: none; }
     .wrap {
       width: min(100% - 2.5rem, var(--max));
       margin-inline: auto;
     }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: .55rem;
-      margin: 0;
-      font-size: .75rem;
-      font-weight: 600;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--accent);
+    .site-header {
+      padding: 1.35rem 0;
     }
-    .eyebrow::before {
-      content: "";
-      width: 1.35rem;
-      height: 1px;
-      background: currentColor;
-    }
-    h1, h2, h3 {
-      font-family: var(--serif);
-      font-weight: 400;
-      line-height: 1.12;
-      margin: 0;
-      letter-spacing: -0.02em;
-    }
-    p { margin: 0; }
-    .muted { color: var(--muted); }
-
-    /* Nav */
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      backdrop-filter: blur(14px);
-      background: color-mix(in srgb, var(--paper) 88%, transparent);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner {
+    .site-header .wrap,
+    .connect {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      min-height: 4rem;
       gap: 1rem;
     }
-    .logo {
+    .mark {
       font-family: var(--serif);
-      font-size: 1.35rem;
+      font-size: 1.15rem;
       text-decoration: none;
-      letter-spacing: -0.01em;
     }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.35rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-size: .92rem;
-      font-weight: 500;
+    .connect {
+      justify-content: flex-end;
+      gap: 1.25rem;
     }
-    .nav-links a { text-decoration: none; color: var(--ink-soft); }
-    .nav-links a:hover { color: var(--accent); }
-    .nav-cta {
-      background: var(--ink) !important;
-      color: var(--paper) !important;
-      padding: .5rem 1rem;
-      border-radius: 999px;
-    }
-    .nav-cta:hover { background: var(--accent-deep) !important; }
-
-    /* Hero */
-    .hero {
-      padding: clamp(3.2rem, 7vw, 5.2rem) 0 clamp(3.8rem, 8vw, 5.8rem);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
-      gap: clamp(1.6rem, 3.5vw, 2.8rem);
-      align-items: stretch;
-    }
-    .hero h1 {
-      font-size: clamp(3.1rem, 8.4vw, 5.6rem);
-      max-width: 10ch;
-    }
-    .hero h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-    .tagline {
-      margin-top: 1.15rem;
-      font-size: clamp(1.05rem, 2vw, 1.22rem);
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      color: var(--ink-soft);
-    }
-    .lead {
-      margin-top: 1.15rem;
-      max-width: 34rem;
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .8rem;
-      margin-top: 2rem;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: .4rem;
-      min-height: 2.85rem;
-      padding: .7rem 1.3rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
+    .connect a {
       font-size: .95rem;
-      border: 1px solid transparent;
-      transition: background .2s ease, border-color .2s ease, color .2s ease;
-    }
-    .btn-primary {
-      background: var(--ink);
-      color: var(--paper);
-    }
-    .btn-primary:hover { background: var(--accent-deep); }
-    .btn-ghost {
-      background: transparent;
-      border-color: var(--line-strong);
-      color: var(--ink);
-    }
-    .btn-ghost:hover {
-      border-color: var(--ink);
-      background: var(--white);
-    }
-    .portrait-card {
-      position: relative;
-      margin: 0;
-      height: 100%;
-      min-height: clamp(28rem, 68vh, 40rem);
-      border-radius: 0;
-      background: transparent;
-    }
-    .portrait-card::before {
-      content: "";
-      position: absolute;
-      z-index: 0;
-      top: 1.15rem;
-      right: 0;
-      bottom: 0;
-      left: 1.15rem;
-      background: var(--ink);
-    }
-    .portrait-card img {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: calc(100% - 1.15rem);
-      height: calc(100% - 1.15rem);
-      max-width: none;
-      object-fit: cover;
-      object-position: center 16%;
-      filter: contrast(1.12);
-      border-radius: 0;
-      box-shadow:
-        0 0 0 1px var(--ink),
-        0 22px 44px rgba(18, 18, 18, 0.28);
-    }
-
-    /* Sections */
-    section { padding: clamp(3.6rem, 8vw, 5.6rem) 0; }
-    .section-head {
-      display: flex;
-      flex-direction: column;
-      gap: .85rem;
-      max-width: 40rem;
-      margin-bottom: 2.3rem;
-    }
-    .section-head h2 {
-      font-size: clamp(2.1rem, 4.8vw, 3.25rem);
-    }
-    .prose {
-      display: grid;
-      gap: 1.15rem;
-      max-width: 42rem;
-      color: var(--ink-soft);
-      font-size: 1.06rem;
-    }
-
-    .band-dark {
-      background: var(--ink);
-      color: var(--paper);
-    }
-    .band-dark .muted { color: rgba(246, 243, 236, 0.68); }
-    .band-dark .eyebrow { color: #c48a68; }
-    .band-dark .section-head h2 { color: var(--paper); }
-    .band-cream { background: var(--paper-deep); }
-
-    /* Experience */
-    .role-block {
-      display: grid;
-      gap: 1.6rem;
-    }
-    .role-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .55rem .9rem;
-      align-items: baseline;
-      margin-bottom: .35rem;
-    }
-    .role-meta .org {
-      font-family: var(--serif);
-      font-size: 1.85rem;
-    }
-    .role-meta .role {
-      font-size: .92rem;
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .band-dark .role-meta .role { color: #c48a68; }
-    .pull-quote {
-      margin: 1.4rem 0 0;
-      padding: 1.35rem 1.5rem;
-      border-left: 2px solid var(--accent);
-      background: rgba(138, 90, 59, 0.08);
-      font-family: var(--serif);
-      font-size: clamp(1.25rem, 2.4vw, 1.55rem);
-      line-height: 1.35;
-      color: var(--ink);
-    }
-    .band-dark .pull-quote {
-      background: rgba(255, 252, 247, 0.04);
-      border-left-color: #c48a68;
-      color: var(--paper);
-    }
-    .areas {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: .75rem;
-      margin-top: 1.8rem;
-    }
-    .area {
-      padding: .95rem .9rem 1.1rem;
-      border: 1px solid var(--line);
-      border-radius: 1rem;
-      background: var(--white);
-      min-width: 0;
-    }
-    .band-dark .area {
-      background: #1a1a1a;
-      border-color: rgba(246, 243, 236, 0.1);
-    }
-    .area strong {
-      display: block;
-      font-size: .78rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      margin-bottom: .45rem;
-      color: var(--accent);
-    }
-    .band-dark .area strong { color: #c48a68; }
-    .area p {
-      font-size: .88rem;
-      color: var(--muted);
-      line-height: 1.45;
-    }
-    .band-dark .area p { color: rgba(246, 243, 236, 0.7); }
-    .fono {
-      margin-top: 2.4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--line);
-    }
-    .band-dark .fono { border-top-color: rgba(246, 243, 236, 0.12); }
-    .fono h3 {
-      font-size: 1.7rem;
-      margin-bottom: .7rem;
-    }
-
-    /* Case studies */
-    .cases {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.1rem;
-    }
-    .case {
-      display: flex;
-      flex-direction: column;
-      gap: .85rem;
-      padding: 1.45rem 1.4rem 1.5rem;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: 1.2rem;
-      min-height: 100%;
-    }
-    .case .kicker {
-      font-size: .74rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .case h3 { font-size: 1.55rem; }
-    .case .body { color: var(--muted); flex: 1; }
-    .case .outcome {
-      font-size: .95rem;
-      color: var(--ink-soft);
-      padding-top: .85rem;
-      border-top: 1px solid var(--line);
-    }
-    .case .outcome strong { font-weight: 600; }
-    .case-link {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-      margin-top: .2rem;
-      font-weight: 600;
-      font-size: .92rem;
       text-decoration: none;
-      color: var(--accent-deep);
-    }
-    .case-link:hover { text-decoration: underline; }
-    .case-link::after { content: "→"; }
-
-    /* Writing */
-    .writing-list {
-      display: grid;
-      gap: 0;
-      border-top: 1px solid var(--line);
-    }
-    .writing-item {
-      display: grid;
-      grid-template-columns: 7.5rem 1fr auto;
-      gap: 1.2rem;
-      align-items: start;
-      padding: 1.25rem 0;
       border-bottom: 1px solid var(--line);
-      text-decoration: none;
+      padding-bottom: .05rem;
     }
-    .writing-item:hover h3 { color: var(--accent-deep); }
-    .writing-item .meta {
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      padding-top: .35rem;
-    }
-    .writing-item h3 {
-      font-size: 1.35rem;
-      margin-bottom: .4rem;
-    }
-    .writing-item p {
-      color: var(--muted);
-      font-size: .98rem;
-      max-width: 40rem;
-    }
-    .writing-item .go {
-      font-size: 1.2rem;
-      color: var(--accent);
-      padding-top: .25rem;
-    }
-    .book-note {
-      margin-top: 2rem;
-      padding: 1.3rem 1.4rem;
-      border: 1px solid var(--line);
-      border-radius: 1.1rem;
-      background: var(--white);
+    .connect a:hover { border-bottom-color: var(--ink); }
+    main { padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(3rem, 7vw, 5rem); }
+    .intro {
       display: grid;
-      gap: .45rem;
+      grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 20rem);
+      grid-template-areas:
+        "title photo"
+        "copy photo";
+      column-gap: clamp(1.75rem, 4vw, 4rem);
+      row-gap: 1.25rem;
+      align-items: center;
+    }
+    .intro h1 { grid-area: title; align-self: end; }
+    .intro .copy { grid-area: copy; align-self: start; }
+    .portrait { grid-area: photo; }
+    h1 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(3.4rem, 7vw, 5.6rem);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+    }
+    .lede,
+    .role,
+    .interests {
+      margin: 0;
       max-width: 36rem;
     }
-    .book-note .label {
-      font-size: .74rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--accent);
+    .lede {
+      margin-top: 1.35rem;
+      font-size: clamp(1.2rem, 2vw, 1.4rem);
+      line-height: 1.45;
     }
-    .book-note strong {
-      font-family: var(--serif);
-      font-size: 1.4rem;
-      font-weight: 400;
-    }
-
-    /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: clamp(1.5rem, 4vw, 3rem);
-      align-items: end;
-    }
-    .contact-grid h2 {
-      font-size: clamp(2.3rem, 5.5vw, 3.6rem);
-      max-width: 12ch;
-    }
-    .contact-grid h2 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-    .contact-links {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: .7rem;
-    }
-    .contact-links a {
-      display: flex;
-      flex-direction: column;
-      gap: .2rem;
-      padding: 1rem 1.05rem;
-      border-radius: 1rem;
-      text-decoration: none;
-      background: var(--white);
-      border: 1px solid var(--line);
-      transition: border-color .2s ease, transform .2s ease;
-    }
-    .contact-links a:hover {
-      border-color: var(--accent);
-      transform: translateY(-1px);
-    }
-    .contact-links strong {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
-    .contact-links span {
-      font-size: .88rem;
+    .role,
+    .interests {
+      margin-top: 1rem;
       color: var(--muted);
     }
-
+    .writing {
+      margin-top: 2.1rem;
+      display: grid;
+      gap: .85rem;
+      justify-items: start;
+    }
+    .writing h2 {
+      margin: 0 0 .15rem;
+      font-family: var(--sans);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .writing a {
+      font-family: var(--serif);
+      text-decoration: none;
+      border-bottom: 1px solid var(--ink);
+      line-height: 1.2;
+    }
+    .writing a:hover { border-bottom-width: 2px; }
+    .cta-primary {
+      font-size: clamp(1.7rem, 3vw, 2.15rem);
+    }
+    .cta-secondary {
+      font-size: clamp(1.2rem, 2vw, 1.4rem);
+    }
+    .portrait {
+      margin: 0;
+    }
+    .portrait img {
+      width: 100%;
+      border-radius: 1.25rem;
+    }
     footer {
       border-top: 1px solid var(--line);
-      padding: 1.4rem 0 2rem;
-      font-size: .9rem;
+      padding: 1.2rem 0 1.6rem;
       color: var(--muted);
+      font-size: .92rem;
     }
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .7rem 1.4rem;
-      justify-content: space-between;
-      align-items: center;
-    }
-    footer a { color: var(--ink-soft); }
-
-    @media (max-width: 1100px) {
-      .areas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
-    @media (max-width: 960px) {
-      .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .writing-item { grid-template-columns: 1fr; gap: .35rem; }
-      .writing-item .go { display: none; }
-    }
-    @media (max-width: 860px) {
-      .hero {
-        padding-top: 0;
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 2rem, var(--max)); }
+      .intro {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "photo"
+          "copy";
+        row-gap: 1.25rem;
       }
-      .hero-grid, .cases, .contact-grid { grid-template-columns: 1fr; }
-      .hero .hero-grid {
-        width: 100%;
-        gap: 1.45rem;
-      }
-      .hero-copy {
-        width: min(100% - 1.6rem, var(--max));
-        margin-inline: auto;
-      }
-      .portrait-card {
-        order: -1;
-        width: 100%;
-        max-width: none;
-        min-height: clamp(22rem, 118vw, 34rem);
-      }
-      .portrait-card::before {
-        top: auto;
-        left: 0;
-        right: 0;
-        height: .7rem;
-      }
-      .portrait-card img {
-        width: 100%;
-        height: calc(100% - .7rem);
-        box-shadow: none;
-      }
-      .nav-links { display: none; }
-      .contact-links { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 560px) {
-      .areas, .contact-links { grid-template-columns: 1fr; }
-      .wrap { width: min(100% - 1.6rem, var(--max)); }
+      .portrait { max-width: 22rem; }
+      h1 { font-size: clamp(3rem, 14vw, 4rem); }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .contact-links a { transition: none; }
     }
   </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="logo" href="#top">Favour Ogazi</a>
-      <nav aria-label="Primary">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#cases">Case studies</a></li>
-          <li><a href="#writing">Writing</a></li>
-          <li><a class="nav-cta" href="#contact">Get in touch</a></li>
-        </ul>
+  <a class="skip" href="#content">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="mark" href="#top">Favour Ogazi</a>
+      <nav class="connect" aria-label="Connect">
+        <a href="https://www.linkedin.com/in/favour-ogazi">LinkedIn</a>
+        <a href="https://x.com/Favour_Ogazi">X</a>
       </nav>
     </div>
   </header>
-
-  <main id="top">
-    <section class="hero" aria-label="Introduction">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Operator · Writer</p>
-          <h1>Favour <em>Ogazi</em></h1>
-          <p class="tagline">I build the operating structure that turns priorities into execution.</p>
-          <p class="lead">Operations Lead at Mighty, a cross-border B2B payments and FX fintech. Founder of FONO Consulting. Writer on psychology, productivity, relationships and faith.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#writing">Read my work</a>
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
-          </div>
-        </div>
-        <figure class="portrait-card">
-          <img src="portrait.jpg" width="800" height="1200" alt="Black-and-white studio portrait of Favour Ogazi">
-        </figure>
+  <main id="content">
+    <div class="wrap intro" id="top">
+      <h1>Favour Ogazi</h1>
+      <div class="copy">
+        <p class="lede">I build the operating structure that turns priorities into execution.</p>
+        <p class="role">Operations Lead at Mighty, a cross-border payments and FX business.</p>
+        <p class="interests">I write about psychology, productivity, relationships and faith.</p>
+        <section class="writing" aria-labelledby="writing-title">
+          <h2 id="writing-title">Writing</h2>
+          <a class="cta-primary" href="https://medium.com/@thefavourogazi">Read my articles</a>
+          <a class="cta-secondary" href="https://favoursnewsletter.substack.com">Receive weekly letters from me</a>
+        </section>
       </div>
-    </section>
-
-    <section id="about" aria-labelledby="about-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">About me</p>
-          <h2 id="about-title">One builder. Several crafts.</h2>
-        </div>
-        <div class="prose">
-          <p>I am Favour Ogazi — also known as Uchenna. I lead operations at Mighty, where I sit at the intersection of strategy and execution across payments, foreign exchange and treasury. My work is to take priorities that cut across the business and make them operationally executable.</p>
-          <p>Before Mighty, I helped build DNI Pay from a young security startup into a live digital payments platform, serving as Head of Business Management and Operations. Through FONO, the advisory firm I founded in 2023, I have worked with eighteen businesses and institutions on pricing, operating systems, growth and practical AI implementation.</p>
-          <p>Writing is how I process what I see and lead. Thousands of readers follow my essays on Substack, Medium and X. I believe documentation and clear communication are leadership skills, and I practise both. Outside work, I am a woman of faith who values friendship, good stories and a full life with room for ambition, curiosity and quiet.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="band-dark" id="work" aria-labelledby="work-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Experience</p>
-          <h2 id="work-title">What I do</h2>
-          <p class="muted">Operating leadership at Mighty, and advisory work through FONO — grounded in execution, not theory.</p>
-        </div>
-
-        <div class="role-block">
-          <div>
-            <div class="role-meta">
-              <span class="org">Mighty</span>
-              <span class="role">Operations Lead · Dec 2025 – present</span>
-            </div>
-            <div class="prose" style="color: rgba(246,243,236,.78)">
-              <p>I joined Mighty as an operator supporting the founder when execution still depended heavily on the CEO’s office. Early work focused on turning priorities into organised execution: structuring internal communication, trackers and standard operating procedures, clarifying ownership, and bringing discipline to trading operations, partner relationships and FX workflows.</p>
-              <p>As Operations Lead, the role widened into cross-functional operating ownership — client and partner onboarding, compliance processes, agreements and commercials, reporting, product operations and workflow design. The standing question is simple: how do we take something commercially promising and make it operationally executable, from regulated onboarding through money movement, settlement and go-live?</p>
-              <p>The work then moved closer to revenue: foreign exchange, rates, liquidity, settlement, collections and payouts, including direct trading. Today the focus is operating leadership — company-wide cadence, onboarding and due diligence, partners through to go-live, and building the trade desk so more of the company can execute well through systems and people, not through any single person.</p>
-            </div>
-            <blockquote class="pull-quote">
-              “I take priorities that cut across the business and create the structure, ownership and momentum required to move them from intention to execution — and, increasingly, to revenue.”
-            </blockquote>
-            <div class="areas" aria-label="Areas of work at Mighty">
-              <article class="area">
-                <strong>01 · Company ops</strong>
-                <p>Cadence, priorities, accountability, reporting and systems that reduce founder dependency.</p>
-              </article>
-              <article class="area">
-                <strong>02 · Commercial</strong>
-                <p>Partnerships, onboarding and client activation from agreement to live activity.</p>
-              </article>
-              <article class="area">
-                <strong>03 · Payments &amp; FX</strong>
-                <p>Liquidity, settlement, collections, payouts, rates and liquidity-provider workflows.</p>
-              </article>
-              <article class="area">
-                <strong>04 · Cross-functional</strong>
-                <p>Coordination across management, compliance, legal, product, engineering and the trade desk.</p>
-              </article>
-              <article class="area">
-                <strong>05 · Revenue</strong>
-                <p>Trading participation and building the people and systems around the function.</p>
-              </article>
-            </div>
-          </div>
-
-          <div class="fono">
-            <h3>FONO Consulting</h3>
-            <div class="prose" style="color: rgba(246,243,236,.78)">
-              <p>I founded FONO in 2023 as an advisory firm for founders who need clarity, structure and purpose in how their businesses run. We help fix pricing, build operating systems that do not depend on the founder for everything, put AI to work in everyday operations, and plan growth that can actually be executed. Eighteen businesses and institutions — from fintech startups to public-sector programmes — have worked with FONO across strategy, communications and operations.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cases" aria-labelledby="cases-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Case studies</p>
-          <h2 id="cases-title">Selected work</h2>
-          <p class="muted">A few engagements with public detail on the problem, the work and what changed. Full write-ups live on my portfolio.</p>
-        </div>
-        <div class="cases">
-          <article class="case">
-            <span class="kicker">Operations · 2023 – 2025</span>
-            <h3>Building DNI Pay from the ground up</h3>
-            <p class="body">DNI began as a security startup and relaunched as DNI Pay, a digital payments platform. As Head of Business Management and Operations, I redefined team structure and OKRs, wrote the twelve-month market entry plan, led the public launch, and built customer experience, KYC, HR and finance systems at go-live — alongside five new partnership agreements.</p>
-            <p class="outcome"><strong>Outcome:</strong> More than 2,000 active users within 21 days of launch; over 95% of KYC completed within 24 hours; 90% of issues resolved within 24 hours.</p>
-            <a class="case-link" href="https://www.favourogazi.com/work-dni.html" rel="noopener">Read the full case study</a>
-          </article>
-
-          <article class="case">
-            <span class="kicker">Content &amp; growth · via FONO · 2024 – 2025</span>
-            <h3>Turning Lagos Liga into a content business</h3>
-            <p class="body">One of Africa’s largest private recreational football leagues had energy on the pitch and little of it online. Through FONO I took over five platforms at once, spotlighted every stakeholder, and repositioned the league as a content business that stays relevant between matches.</p>
-            <p class="outcome"><strong>Outcome:</strong> In one month, impressions up 1,868%, new followers up 2,098%, engagement up 75% to 5.1%, with organic trending on X.</p>
-            <a class="case-link" href="https://www.favourogazi.com/work-lagos-liga-2024.html" rel="noopener">Read the full case study</a>
-          </article>
-
-          <article class="case">
-            <span class="kicker">Marketing &amp; partnerships · via FONO · 2023 – 2024</span>
-            <h3>Marketing and partnerships for TechUnwind Fest</h3>
-            <p class="body">Across three editions of a lifestyle-meets-tech festival, FONO led marketing and partnerships: hybrid digital and on-the-ground campaigns, more than eighteen brand partnerships structured as mutual activations, and an educate–entertain–sell content framework.</p>
-            <p class="outcome"><strong>Outcome:</strong> More than 3,000 attendees across three editions; 40% attendee-to-user conversion; 650,000+ impressions.</p>
-            <a class="case-link" href="https://www.favourogazi.com/work-techunwind-fest.html" rel="noopener">Read the full case study</a>
-          </article>
-
-          <article class="case">
-            <span class="kicker">Strategic communications · via FONO · 2024</span>
-            <h3>National MSME Conference</h3>
-            <p class="body">For one of Nigeria’s most significant small-business gatherings, FONO ran integrated communications from first invite to post-event follow-up — social, email sequences, influencer coordination, live coverage and press — with email as the engine for virtual attendance.</p>
-            <p class="outcome"><strong>Outcome:</strong> More than 8,000 applications; 800 in-person attendees at full capacity; 600+ online; 70% email open rate (3.2× industry average).</p>
-            <a class="case-link" href="https://www.favourogazi.com/work-national-msme-conference-2024.html" rel="noopener">Read the full case study</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="band-cream" id="writing" aria-labelledby="writing-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Writing</p>
-          <h2 id="writing-title">Ideas, over time</h2>
-          <p class="muted">Essays on productivity, psychology, relationships and faith — written to help people think differently and grow.</p>
-        </div>
-        <div class="writing-list">
-          <a class="writing-item" href="https://medium.com/@thefavourogazi/what-do-you-have-in-your-hands-84d61900e5d2" target="_blank" rel="noopener">
-            <span class="meta">Medium · Jun 2026</span>
-            <div>
-              <h3>What Do You Have In Your Hands?</h3>
-              <p>Build from what you already have, before chasing what you lack.</p>
-            </div>
-            <span class="go" aria-hidden="true">→</span>
-          </a>
-          <a class="writing-item" href="https://medium.com/@thefavourogazi/have-hobbies-that-do-not-scale-c2be5e06cc0a" target="_blank" rel="noopener">
-            <span class="meta">Medium · Jan 2026</span>
-            <div>
-              <h3>Have Hobbies That Do Not Scale</h3>
-              <p>A case for private joys that cannot be measured, monetised or posted.</p>
-            </div>
-            <span class="go" aria-hidden="true">→</span>
-          </a>
-          <a class="writing-item" href="https://medium.com/@thefavourogazi/slow-death-34ce5e1d343a" target="_blank" rel="noopener">
-            <span class="meta">Medium · Nov 2025</span>
-            <div>
-              <h3>Slow Death</h3>
-              <p>How we quietly lose ourselves, and how choosing yourself turns it around.</p>
-            </div>
-            <span class="go" aria-hidden="true">→</span>
-          </a>
-          <a class="writing-item" href="https://medium.com/@thefavourogazi/you-want-more-than-i-can-give-ccfd6936a4b8" target="_blank" rel="noopener">
-            <span class="meta">Medium · Oct 2025</span>
-            <div>
-              <h3>You Want More Than I Can Give</h3>
-              <p>On the weight of friendship, and giving your fullest self to a few.</p>
-            </div>
-            <span class="go" aria-hidden="true">→</span>
-          </a>
-          <a class="writing-item" href="https://favoursnewsletter.substack.com/p/they-dont-tell-you-how-it-feels-to" target="_blank" rel="noopener">
-            <span class="meta">Substack · May 2025</span>
-            <div>
-              <h3>They Don’t Tell You How It Feels To Be A Christian Girl In Nigeria</h3>
-              <p>An honest look at faith, setbacks and grace as a young woman.</p>
-            </div>
-            <span class="go" aria-hidden="true">→</span>
-          </a>
-          <a class="writing-item" href="https://favoursnewsletter.substack.com/p/bad-girls-of-the-bible" target="_blank" rel="noopener">
-            <span class="meta">Substack · Apr 2025</span>
-            <div>
-              <h3>Bad Girls Of The Bible</h3>
-              <p>Ten flawed women of scripture, and what their stories say about grace.</p>
-            </div>
-            <span class="go" aria-hidden="true">→</span>
-          </a>
-        </div>
-        <aside class="book-note" aria-label="Upcoming anthology">
-          <span class="label">Coming soon</span>
-          <strong>Of Living and Other Things</strong>
-          <p class="muted">My first anthology — personal essays and prose. Join the newsletter to be first to know.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="wrap contact-grid">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Let’s build <em>something.</em></h2>
-          <p class="muted" style="margin-top:1rem;max-width:32rem">For advisory through FONO, speaking, writing or a thoughtful conversation about the work — write to me directly, or find me on the channels below.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:thefavourogazi@gmail.com">thefavourogazi@gmail.com</a>
-            <a class="btn btn-ghost" href="https://www.favourogazi.com/contact.html" rel="noopener">Portfolio contact</a>
-          </div>
-        </div>
-        <div class="contact-links" aria-label="Elsewhere">
-          <a href="https://www.linkedin.com/in/favour-ogazi" target="_blank" rel="noopener">
-            <strong>LinkedIn</strong>
-            <span>favour-ogazi</span>
-          </a>
-          <a href="https://x.com/favour_ogazi" target="_blank" rel="noopener">
-            <strong>X</strong>
-            <span>@favour_ogazi</span>
-          </a>
-          <a href="https://favoursnewsletter.substack.com" target="_blank" rel="noopener">
-            <strong>Substack</strong>
-            <span>Favour’s Newsletter</span>
-          </a>
-          <a href="https://medium.com/@thefavourogazi" target="_blank" rel="noopener">
-            <strong>Medium</strong>
-            <span>@thefavourogazi</span>
-          </a>
-          <a href="https://www.favourogazi.com/" rel="noopener">
-            <strong>Portfolio</strong>
-            <span>favourogazi.com</span>
-          </a>
-          <a href="https://favoursnewsletter.substack.com/subscribe" target="_blank" rel="noopener">
-            <strong>Newsletter</strong>
-            <span>Subscribe</span>
-          </a>
-        </div>
-      </div>
-    </section>
+      <figure class="portrait">
+        <img src="portrait.jpg" width="1200" height="1500" alt="Favour Ogazi smiling, wearing a burgundy sweater, against a grey background.">
+      </figure>
+    </div>
   </main>
-
   <footer>
-    <div class="wrap footer-inner">
-      <p>© <span id="yr">2026</span> Favour Ogazi</p>
-      <p><a href="https://www.favourogazi.com/">favourogazi.com</a> · <a href="mailto:thefavourogazi@gmail.com">thefavourogazi@gmail.com</a></p>
+    <div class="wrap">
+      <p>© 2026 Favour Ogazi</p>
     </div>
   </footer>
-  <script>
-    document.getElementById('yr').textContent = String(new Date().getFullYear());
-  </script>
 </body>
 </html>
