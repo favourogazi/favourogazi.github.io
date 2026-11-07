@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Favour Ogazi</title>
-  <meta name="description" content="Favour Ogazi is Operations Lead at Mighty, a cross-border payments and FX business. She writes about psychology, productivity, relationships and faith.">
+  <meta name="description" content="Favour Ogazi is Operations Lead at Mighty Africa. She builds and coordinates operations across treasury, people, processes and systems, and writes about psychology, productivity, relationships and faith.">
   <meta name="theme-color" content="#f3f0e8">
   <style>
     :root {
@@ -14,7 +14,7 @@
       --line: rgba(28, 27, 23, 0.16);
       --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
       --sans: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
-      --max: 68rem;
+      --max: 64rem;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -23,12 +23,13 @@
       color: var(--ink);
       background: var(--bg);
       font-family: var(--sans);
-      font-size: 1.0625rem;
+      font-size: 1.05rem;
       line-height: 1.6;
       text-rendering: optimizeLegibility;
     }
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
+    p { margin: 0; }
     :focus-visible {
       outline: 2px solid var(--ink);
       outline-offset: 3px;
@@ -48,108 +49,78 @@
       width: min(100% - 2.5rem, var(--max));
       margin-inline: auto;
     }
-    .site-header {
-      padding: 1.35rem 0;
-    }
-    .site-header .wrap,
-    .connect {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
+    .site-header { padding: 1.25rem 0 0; }
     .mark {
       font-family: var(--serif);
-      font-size: 1.15rem;
+      font-size: 1.05rem;
       text-decoration: none;
     }
-    .connect {
-      justify-content: flex-end;
-      gap: 1.25rem;
-    }
-    .connect a {
-      font-size: .95rem;
-      text-decoration: none;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: .05rem;
-    }
-    .connect a:hover { border-bottom-color: var(--ink); }
-    main { padding: clamp(1.5rem, 4vw, 3rem) 0 clamp(3rem, 7vw, 5rem); }
+    main { padding: clamp(2.2rem, 5vw, 3.6rem) 0 clamp(2.5rem, 6vw, 4rem); }
     .intro {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 20rem);
+      grid-template-columns: minmax(0, 1.25fr) minmax(15rem, 19rem);
       grid-template-areas:
-        "title photo"
-        "copy photo";
-      column-gap: clamp(1.75rem, 4vw, 4rem);
-      row-gap: 1.25rem;
-      align-items: center;
+        "lead photo"
+        "rest photo";
+      column-gap: clamp(1.75rem, 4vw, 3.5rem);
+      row-gap: 0;
+      align-items: start;
     }
-    .intro h1 { grid-area: title; align-self: end; }
-    .intro .copy { grid-area: copy; align-self: start; }
+    .lead { grid-area: lead; }
+    .rest { grid-area: rest; }
     .portrait { grid-area: photo; }
-    h1 {
-      margin: 0;
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: clamp(3.4rem, 7vw, 5.6rem);
-      line-height: 0.96;
-      letter-spacing: -0.03em;
-    }
-    .lede,
-    .role,
-    .interests {
-      margin: 0;
-      max-width: 36rem;
-    }
-    .lede {
-      margin-top: 1.35rem;
-      font-size: clamp(1.2rem, 2vw, 1.4rem);
-      line-height: 1.45;
-    }
-    .role,
-    .interests {
-      margin-top: 1rem;
-      color: var(--muted);
-    }
-    .writing {
-      margin-top: 2.1rem;
-      display: grid;
-      gap: .85rem;
-      justify-items: start;
-    }
-    .writing h2 {
-      margin: 0 0 .15rem;
-      font-family: var(--sans);
-      font-size: .78rem;
+    .eyebrow {
+      margin: 0 0 .7rem;
+      font-size: .74rem;
       font-weight: 600;
       letter-spacing: .14em;
       text-transform: uppercase;
       color: var(--muted);
     }
-    .writing a {
+    h1 {
+      margin: 0;
+      max-width: 16ch;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(2rem, 3.4vw, 2.7rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+    .about {
+      display: grid;
+      gap: .9rem;
+      max-width: 38rem;
+      margin-top: 1.15rem;
+      color: var(--muted);
+    }
+    .about a {
+      color: var(--ink);
+      text-underline-offset: .14em;
+    }
+    .block { margin-top: 2rem; }
+    .links {
+      display: grid;
+      gap: .55rem;
+      justify-items: start;
+    }
+    .links a {
       font-family: var(--serif);
       text-decoration: none;
       border-bottom: 1px solid var(--ink);
-      line-height: 1.2;
+      line-height: 1.25;
     }
-    .writing a:hover { border-bottom-width: 2px; }
-    .cta-primary {
-      font-size: clamp(1.7rem, 3vw, 2.15rem);
-    }
-    .cta-secondary {
-      font-size: clamp(1.2rem, 2vw, 1.4rem);
-    }
-    .portrait {
-      margin: 0;
-    }
+    .links a:hover { border-bottom-width: 2px; }
+    .cta-primary { font-size: 1.45rem; }
+    .cta-secondary,
+    .connect a { font-size: 1.15rem; }
+    .portrait { margin: .2rem 0 0; }
     .portrait img {
       width: 100%;
       border-radius: 1.25rem;
     }
     footer {
       border-top: 1px solid var(--line);
-      padding: 1.2rem 0 1.6rem;
+      padding: 1.15rem 0 1.5rem;
       color: var(--muted);
       font-size: .92rem;
     }
@@ -158,13 +129,13 @@
       .intro {
         grid-template-columns: 1fr;
         grid-template-areas:
-          "title"
+          "lead"
           "photo"
-          "copy";
-        row-gap: 1.25rem;
+          "rest";
+        row-gap: 1.35rem;
       }
-      .portrait { max-width: 22rem; }
-      h1 { font-size: clamp(3rem, 14vw, 4rem); }
+      .portrait { max-width: 18rem; margin-top: 0; }
+      h1 { font-size: 1.85rem; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -176,23 +147,32 @@
   <header class="site-header">
     <div class="wrap">
       <a class="mark" href="#top">Favour Ogazi</a>
-      <nav class="connect" aria-label="Connect">
-        <a href="https://www.linkedin.com/in/favour-ogazi">LinkedIn</a>
-        <a href="https://x.com/Favour_Ogazi">X</a>
-      </nav>
     </div>
   </header>
   <main id="content">
     <div class="wrap intro" id="top">
-      <h1>Favour Ogazi</h1>
-      <div class="copy">
-        <p class="lede">I build the operating structure that turns priorities into execution.</p>
-        <p class="role">Operations Lead at <a href="https://mighty.africa">Mighty</a>, a cross-border payments and FX business.</p>
-        <p class="interests">I write about psychology, productivity, relationships and faith.</p>
-        <section class="writing" aria-labelledby="writing-title">
-          <h2 id="writing-title">Writing</h2>
-          <a class="cta-primary" href="https://medium.com/@thefavourogazi">Read my articles</a>
-          <a class="cta-secondary" href="https://favoursnewsletter.substack.com">Receive weekly letters from me</a>
+      <div class="lead">
+        <p class="eyebrow">What I'm building</p>
+        <h1>The operations behind cross-border payments.</h1>
+        <div class="about">
+          <p>I'm Favour Ogazi, Operations Lead at <a href="https://mighty.africa">Mighty Africa</a>, a cross-border payments liquidity platform. I build and coordinate the operations across treasury, people, processes and systems.</p>
+          <p>I also write about psychology, productivity, relationships and faith.</p>
+        </div>
+      </div>
+      <div class="rest">
+        <section class="block writing" aria-labelledby="writing-title">
+          <h2 class="eyebrow" id="writing-title">Writing</h2>
+          <div class="links">
+            <a class="cta-primary" href="https://medium.com/@thefavourogazi">Read my articles</a>
+            <a class="cta-secondary" href="https://favoursnewsletter.substack.com">Receive weekly letters from me</a>
+          </div>
+        </section>
+        <section class="block connect" aria-labelledby="connect-title">
+          <h2 class="eyebrow" id="connect-title">Connect</h2>
+          <div class="links">
+            <a href="https://www.linkedin.com/in/favour-ogazi">LinkedIn</a>
+            <a href="https://x.com/Favour_Ogazi">X</a>
+          </div>
         </section>
       </div>
       <figure class="portrait">
